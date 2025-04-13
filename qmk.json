@@ -1,6 +1,7 @@
 {
     "userspace_version": "1.1",
     "build_targets": [
-        ["ferris/sweep", "colemak_jkl"]
+        ["ferris/sweep", "colemak_jkl"],
+        ["bastardkb/dilemma/3x5_3", "colemak_jkl"]
     ]
 }

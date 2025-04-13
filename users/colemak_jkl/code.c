@@ -2,7 +2,7 @@
 
 #include QMK_KEYBOARD_H
 
-enum layer_names { BASE, SYM, NUM, NAV, FUN };
+enum layer_names { BASE, SYM, NUM, NAV, FUN, MOUSE };
 
 #ifdef KEYBOARD_crkbd
     #include "3x6_3_config.h"
@@ -14,7 +14,7 @@ enum layer_names { BASE, SYM, NUM, NAV, FUN };
     #include "layouts/3x5_2.c"
 #endif
 #ifdef KEYBOARD_bastardkb_dilemma
-    #include "3x5_3_config.h"
+    #include "layouts/3x5_3.c"
 #endif
 
 const uint16_t PROGMEM pipe_combo[] = {KC_COMMA, KC_DOT, COMBO_END};
@@ -51,7 +51,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 #ifdef POINTING_DEVICE_ENABLE
     #include "pointing_device.h"
-    #include "pointing_device_gestures.h"
+// Hack since this is not exposed by driver code
+void cirque_pinnacle_enable_cursor_glide(bool enable);
 
 // Move accumulation when in deadzone
 int8_t move_accumulated_x = 0;
@@ -70,7 +71,7 @@ float scroll_accumulated_v = 0;
 
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     pointing_device_task_auto_mouse(mouse_report);
-    if (layer_state_is(U_NAV) || layer_state_is(U_NUM)) {
+    if (layer_state_is(NAV) || layer_state_is(NUM)) {
         if (mouse_report.x == 0 && mouse_report.y == 0) {
             return mouse_report;
         }
@@ -120,8 +121,8 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
 }
 
 void pointing_device_init_user(void) {
-    set_auto_mouse_layer(U_MOUSE); // only required if AUTO_MOUSE_DEFAULT_LAYER is not set to index of <mouse_layer>
-    set_auto_mouse_enable(true);   // always required before the auto mouse feature will work
+    set_auto_mouse_layer(MOUSE);
+    set_auto_mouse_enable(true);
 }
 
 #endif
@@ -136,6 +137,6 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
             tap_code(clockwise ? KC_AUDIO_VOL_UP : KC_AUDIO_VOL_DOWN);
             break;
     }
-    return true;
+    return false;
 }
 #endif
