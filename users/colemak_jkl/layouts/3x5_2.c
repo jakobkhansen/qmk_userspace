@@ -35,12 +35,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXX,          KC_F1,          KC_F2,          KC_F3,          KC_F10,  XXX,  XXX,  XXX,  XXX,  XXX,  \
         KC_LSFT,      XXX,            XXX,            XXX             \
     ),
-    // Disable all holds
+    // Disable most holds
     [NOHOLD] = LAYOUT( \
-        KC_Q,    KC_W,    KC_F,     KC_P,   KC_B,  KC_Y,  KC_J,  KC_K,      KC_L,    KC_SCLN,   \
-        KC_A,    KC_R,    KC_S,     KC_T,   KC_G,  KC_H,  KC_N,  KC_E,      KC_O,    KC_I,      \
-        KC_Z,    KC_X,    KC_C,     KC_D,   KC_V,  KC_M,  KC_U,  KC_COMMA,  KC_DOT,  KC_MINUS,  \
-        KC_TAB,  KC_SPC,  KC_BSPC,  KC_ENT  \
+        KC_Q,            KC_W,          KC_F,     KC_P,           KC_B,  KC_Y,  KC_J,  KC_K,      KC_L,    KC_SCLN,   \
+        KC_A,            KC_R,          KC_S,     KC_T,           KC_G,  KC_H,  KC_N,  KC_E,      KC_O,    KC_I,      \
+        LCTL_T(KC_Z),    LALT_T(KC_X),  KC_C,     KC_D,           KC_V,  KC_M,  KC_U,  KC_COMMA,  KC_DOT,  KC_MINUS,  \
+        LSFT_T(KC_TAB),  KC_SPC,        KC_BSPC,  LGUI_T(KC_ENT)  \
     ),
     // QWERTY for somewhat capable gaming
     [QWERTY] = LAYOUT( \

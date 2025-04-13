@@ -36,18 +36,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     // Auto-mouse layer
     [MOUSE] = LAYOUT_split_3x5_3( \
-        KC_Q,          KC_W,          KC_F,          KC_P,          KC_B,             KC_Y,            KC_J,          KC_K,          KC_L,          KC_SCLN,       \
-        LCTL_T(KC_A),  LALT_T(KC_R),  LGUI_T(KC_S),  LSFT_T(KC_T),  KC_G,             KC_H,            RSFT_T(KC_N),  LGUI_T(KC_E),  LALT_T(KC_O),  LCTL_T(KC_I),  \
-        LT(FUN,KC_Z),  KC_X,          KC_C,          KC_D,          KC_BTN3,          KC_M,            KC_U,          KC_COMMA,      KC_DOT,        KC_MINUS,      \
-        XXX,           KC_BTN1,       LT(NAV,        KC_BTN2),      LT(NUM,KC_BSPC),  LT(SYM,KC_ENT),  XXX            \
+        KC_Q,          KC_W,          KC_F,             KC_P,             KC_B,            KC_Y,  KC_J,          KC_K,          KC_L,          KC_SCLN,       \
+        LCTL_T(KC_A),  LALT_T(KC_R),  LGUI_T(KC_S),     LSFT_T(KC_T),     KC_G,            KC_H,  RSFT_T(KC_N),  LGUI_T(KC_E),  LALT_T(KC_O),  LCTL_T(KC_I),  \
+        LT(FUN,KC_Z),  KC_X,          KC_C,             KC_D,             KC_BTN3,         KC_M,  KC_U,          KC_COMMA,      KC_DOT,        KC_MINUS,      \
+        XXX,           KC_BTN1,       LT(NAV,KC_BTN2),  LT(NUM,KC_BSPC),  LT(SYM,KC_ENT),  XXX    \
 
     ),
-    // Disable all holds
+    // Disable most holds
     [NOHOLD] = LAYOUT_split_3x5_3( \
-        KC_Q,  KC_W,    KC_F,    KC_P,     KC_B,    KC_Y,  KC_J,  KC_K,      KC_L,    KC_SCLN,           \
-        KC_A,  KC_R,    KC_S,    KC_T,     KC_G,    KC_H,  KC_N,  KC_E,      KC_O,    KC_I,              \
-        KC_Z,  KC_X,    KC_C,    KC_D,     KC_V,    KC_M,  KC_U,  KC_COMMA,  KC_DOT,  KC_MINUS,  \
-        XXX,   KC_TAB,  KC_SPC,  KC_BSPC,  KC_ENT,  XXX    \
+        KC_Q,          KC_W,            KC_F,    KC_P,     KC_B,            KC_Y,  KC_J,  KC_K,      KC_L,    KC_SCLN,   \
+        KC_A,          KC_R,            KC_S,    KC_T,     KC_G,            KC_H,  KC_N,  KC_E,      KC_O,    KC_I,      \
+        LCTL_T(KC_Z),  LALT_T(KC_X),    KC_C,    KC_D,     KC_V,            KC_M,  KC_U,  KC_COMMA,  KC_DOT,  KC_MINUS,  \
+        XXX,           LSFT_T(KC_TAB),  KC_SPC,  KC_BSPC,  LGUI_T(KC_ENT),  XXX    \
     ),
     // QWERTY for somewhat capable gaming
     [QWERTY] = LAYOUT_split_3x5_3( \
