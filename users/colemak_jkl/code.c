@@ -2,7 +2,7 @@
 
 #include QMK_KEYBOARD_H
 
-enum layer_names { BASE, SYM, NUM, NAV, FUN, MOUSE };
+enum layer_names { BASE, SYM, NUM, NAV, FUN, MOUSE, NOHOLD, QWERTY };
 
 #ifdef KEYBOARD_crkbd
     #include "3x6_3_config.h"
@@ -17,12 +17,20 @@ enum layer_names { BASE, SYM, NUM, NAV, FUN, MOUSE };
     #include "layouts/3x5_3.c"
 #endif
 
-const uint16_t PROGMEM pipe_combo[] = {KC_COMMA, KC_DOT, COMBO_END};
-const uint16_t PROGMEM esc_combo[]  = {LGUI_T(KC_S), LSFT_T(KC_T), COMBO_END};
+const uint16_t PROGMEM pipe_combo[]     = {KC_COMMA, KC_DOT, COMBO_END};
+const uint16_t PROGMEM esc_combo[]      = {LGUI_T(KC_S), LSFT_T(KC_T), COMBO_END};
+const uint16_t PROGMEM nohold_enable[]  = {KC_SCLN, LCTL_T(KC_I), KC_MINUS, COMBO_END};
+const uint16_t PROGMEM nohold_disable[] = {KC_SCLN, KC_I, KC_MINUS, COMBO_END};
+const uint16_t PROGMEM qwerty_enable[]  = {KC_Q, KC_SCLN, LCTL_T(KC_I), KC_MINUS, COMBO_END};
+const uint16_t PROGMEM qwerty_disable[] = {KC_P, KC_SCLN, KC_SLASH, COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(esc_combo, KC_ESC),
     COMBO(pipe_combo, KC_PIPE),
+    COMBO(nohold_enable, DF(NOHOLD)),
+    COMBO(nohold_disable, DF(BASE)),
+    COMBO(qwerty_enable, DF(QWERTY)),
+    COMBO(qwerty_disable, DF(BASE))
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
