@@ -8,7 +8,7 @@
 #define QUICK_TAP_TERM 80
 
 // Combos
-#define COMBO_COUNT 6
+#define COMBO_COUNT 7
 #define COMBO_TERM 20
 #define EXTRA_SHORT_COMBOS
 
