@@ -52,21 +52,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case KC_BTN3:
             mouse3_pressed = record->event.pressed;
             break;
-        case LALT_T(LGUI(KC_4)):
+        case LALT_T(LALT(KC_4)):
             if (record->tap.count && record->event.pressed) {
-                tap_code16(LGUI(KC_4));
+                tap_code16(LALT(KC_4));
                 return false;
             }
             break;
-        case LGUI_T(LGUI(KC_5)):
+        case LGUI_T(LALT(KC_5)):
             if (record->tap.count && record->event.pressed) {
-                tap_code16(LGUI(KC_5));
+                tap_code16(LALT(KC_5));
                 return false;
             }
             break;
-        case LSFT_T(LGUI(KC_6)):
+        case LSFT_T(LALT(KC_6)):
             if (record->tap.count && record->event.pressed) {
-                tap_code16(LGUI(KC_6));
+                tap_code16(LALT(KC_6));
                 return false;
             }
             break;

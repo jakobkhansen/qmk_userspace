@@ -23,9 +23,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_0,     KC_BSLS,  XXX,   XXX    \
     ),
     [NAV] = LAYOUT( \
-        XXX,      LGUI(KC_7),          LGUI(KC_8),          LGUI(KC_9),          XXX,  XXX,      KC_DOWN,  KC_UP,    KC_RIGHT,  XXX,  \
-        KC_LCTL,  LALT_T(LGUI(KC_4)),  LGUI_T(LGUI(KC_5)),  LSFT_T(LGUI(KC_6)),  XXX,  KC_LEFT,  KC_VOLD,  KC_VOLU,  XXX,       XXX,  \
-        XXX,      LGUI(KC_1),          LGUI(KC_2),          LGUI(KC_3),          XXX,  XXX,      KC_BRID,  KC_BRIU,  XXX,       XXX,  \
+        XXX,      LALT(KC_7),          LALT(KC_8),          LALT(KC_9),          XXX,  XXX,      KC_DOWN,  KC_UP,    KC_RIGHT,  XXX,  \
+        KC_LCTL,  LALT_T(LALT(KC_4)),  LGUI_T(LALT(KC_5)),  LSFT_T(LALT(KC_6)),  XXX,  KC_LEFT,  KC_VOLD,  KC_VOLU,  XXX,       XXX,  \
+        XXX,      LALT(KC_1),          LALT(KC_2),          LALT(KC_3),          XXX,  XXX,      KC_BRID,  KC_BRIU,  XXX,       XXX,  \
         XXX,      XXX,                 XXX,                 XXX                  \
     ),
     // Auto-mouse layer
