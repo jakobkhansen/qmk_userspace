@@ -23,9 +23,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXX,      KC_0,  KC_BSLS,  XXX,   XXX,      XXX       \
     ),
     [NAV] = LAYOUT_split_3x5_3( \
-        XXX,      LGUI(KC_7),          LGUI(KC_8),          LGUI(KC_9),          XXX,  XXX,      KC_DOWN,  KC_UP,    KC_RIGHT,  XXX,  \
-        KC_LCTL,  LALT_T(LGUI(KC_4)),  LGUI_T(LGUI(KC_5)),  LSFT_T(LGUI(KC_6)),  XXX,  KC_LEFT,  KC_VOLD,  KC_VOLU,  XXX,       XXX,  \
-        XXX,      LGUI(KC_1),          LGUI(KC_2),          LGUI(KC_3),          XXX,  XXX,      KC_BRID,  KC_BRIU,  XXX,       XXX,  \
+        XXX,      LALT(KC_7),          LALT(KC_8),          LALT(KC_9),          XXX,  XXX,      KC_DOWN,  KC_UP,    KC_RIGHT,  XXX,  \
+        KC_LCTL,  LALT_T(LALT(KC_4)),  LALT(LGUI(KC_5)),  LSFT_T(LALT(KC_6)),  XXX,  KC_LEFT,  KC_VOLD,  KC_VOLU,  XXX,       XXX,  \
+        XXX,      LALT(KC_1),          LALT(KC_2),          LALT(KC_3),          XXX,  XXX,      KC_BRID,  KC_BRIU,  XXX,       XXX,  \
         XXX,      XXX,                 XXX,                 XXX,                 XXX,  XXX       \
     ),
     [FUN] = LAYOUT_split_3x5_3( \
@@ -38,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [MOUSE] = LAYOUT_split_3x5_3( \
         KC_Q,             KC_W,          KC_F,             KC_P,             KC_B,            KC_Y,  KC_J,          KC_K,          KC_L,          KC_SCLN,       \
         LCTL_T(KC_A),     LALT_T(KC_R),  LGUI_T(KC_S),     LSFT_T(KC_T),     KC_G,            KC_H,  RSFT_T(KC_N),  LGUI_T(KC_E),  LALT_T(KC_O),  LCTL_T(KC_I),  \
-        LT(FUN,KC_BTN3),  KC_X,          KC_C,             KC_D,             KC_V,            KC_M,  KC_U,          KC_COMMA,      KC_DOT,        KC_MINUS,      \
-        XXX,              KC_BTN1,       LT(NAV,KC_BTN2),  LT(NUM,KC_BSPC),  LT(SYM,KC_ENT),  XXX    \
+        LT(FUN,MS_BTN3),  KC_X,          KC_C,             KC_D,             KC_V,            KC_M,  KC_U,          KC_COMMA,      KC_DOT,        KC_MINUS,      \
+        XXX,              MS_BTN1,       LT(NAV,MS_BTN2),  LT(NUM,KC_BSPC),  LT(SYM,KC_ENT),  XXX    \
 
     ),
     // Disable most holds

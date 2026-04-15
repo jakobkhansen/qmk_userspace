@@ -66,5 +66,5 @@ LAYOUT_split_3x6_3( \
   XXX, QK_BOOT,        KC_F7,          KC_F8,          KC_F9,         KC_F12,   XXX, XXX, XXX, XXX, XXX, XXX,   \
   XXX, LCTL_T(K10),    LALT_T(KC_F4),  LGUI_T(KC_F5),  LSFT_T(KC_F6), KC_F11,   XXX, XXX, XXX, XXX, XXX, XXX,  \
   XXX, K20,            KC_F1,          KC_F2,          KC_F3,         KC_F10,   XXX, XXX, XXX, XXX, XXX, XXX,   \
-                                  XXX,            KC_BTN2,       KC_BTN1,  XXX, XXX, XXX              \
+                                  XXX,            MS_BTN2,       MS_BTN1,  XXX, XXX, XXX              \
 )

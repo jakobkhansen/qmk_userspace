@@ -43,13 +43,13 @@ bool mouse3_pressed = false;
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case KC_BTN1:
+        case MS_BTN1:
             mouse1_pressed = record->event.pressed;
             break;
-        case KC_BTN2:
+        case MS_BTN2:
             mouse2_pressed = record->event.pressed;
             break;
-        case KC_BTN3:
+        case MS_BTN3:
             mouse3_pressed = record->event.pressed;
             break;
         case LALT_T(LALT(KC_4)):
